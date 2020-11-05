@@ -29,11 +29,45 @@ namespace Inheritance
              * Creatively display the class member values 
              */
 
+            var raven = new Bird
+            {
+                CanFly = true,
+                WingColor = "black",
+                SoundProduced = "caw caw",
+                Migrate = true 
+            };
+
+            var flamingo = new Bird()
+            {
+                CanFly = true,
+                WingColor = "Pink",
+                SoundProduced = "honk",
+                Migrate = true
+            };
+
+
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Bird class
              *  
              * Creatively display the class member values 
              */
+
+            var alligator = new Reptile()
+            {
+                HasScales = true,
+                HasTail = true,
+                Diet = "Whatever it wants.",
+                Fangs = 0
+            };
+
+            var Rattlesnake = new Reptile()
+            {
+                HasScales = true,
+                HasTail = true,
+                Diet = "Anything smaller than it.",
+                Fangs = 2
+            };
+
         }
     }
 }
