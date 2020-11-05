@@ -31,18 +31,21 @@ namespace Inheritance
 
             var raven = new Bird
             {
+                AnimalName = "Raven",
                 CanFly = true,
                 WingColor = "black",
                 SoundProduced = "caw caw",
-                Migrate = true 
+                Migrate = true,
             };
 
             var flamingo = new Bird()
             {
+                AnimalName =  "Flamingo",
                 CanFly = true,
                 WingColor = "Pink",
                 SoundProduced = "honk",
-                Migrate = true
+                Migrate = true,
+                CanSwim = true
             };
 
 
@@ -54,19 +57,36 @@ namespace Inheritance
 
             var alligator = new Reptile()
             {
+                AnimalName = "Alligator",
                 HasScales = true,
                 HasTail = true,
                 Diet = "Whatever it wants.",
                 Fangs = 0
             };
 
-            var Rattlesnake = new Reptile()
+            var rattlesnake = new Reptile()
             {
+                AnimalName = "Rattlesnake",
                 HasScales = true,
                 HasTail = true,
                 Diet = "Anything smaller than it.",
-                Fangs = 2
+                Fangs = 2,
+                Legs = 0,
+                CanSwim = false,
+                HasSpine = false
             };
+
+            var theZoo = new Animal[] { raven, flamingo, alligator, rattlesnake };
+
+            foreach (var animal in theZoo)
+            {
+                Console.WriteLine($"Animal: {animal.AnimalName}");
+                Console.WriteLine($"Can Swim: {animal.CanSwim}");
+                Console.WriteLine($"Hair Type: {animal.HairType}");
+                Console.WriteLine($"Vertebrate: {animal.HasSpine}");
+                Console.WriteLine($"I have {animal.Legs} legs.");
+                Console.WriteLine();
+            }
 
         }
     }

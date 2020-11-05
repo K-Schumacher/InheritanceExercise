@@ -9,7 +9,7 @@ namespace Inheritance
     {
         public Bird()
         {
-            CanSwim = true;
+            CanSwim = false;
             HairType = "Feathers";
             HasSpine = true;
             Legs = 2;
